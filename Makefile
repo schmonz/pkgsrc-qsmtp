@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/10/24 22:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/12/08 23:08:15 hgutch Exp $
 
 DISTNAME=		Qsmtp-0.39
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tar.xz
@@ -12,7 +12,7 @@ COMMENT=		Drop-in replacement for qmail-smtpd and qmail-remote
 LICENSE=		gnu-gpl-v2
 
 USE_CMAKE=		yes
-CMAKE_ARGS+=		-DAUTOQMAIL=${QMAILDIR}
+CMAKE_CONFIGURE_ARGS+=		-DAUTOQMAIL=${QMAILDIR}
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
